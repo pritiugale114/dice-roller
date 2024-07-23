@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dice Roller</title>
+    <style>
+        .heading {
+            text-align: center;
+            text-decoration: underline;
+        }
+
+        .app-conatiner {
+            height: 210px;
+            width: 200px;
+            border: 2px solid black;
+            margin: 50px auto;
+            background-color: aliceblue;
+            box-shadow: 0px 0px 10px rgb(44, 44, 44);
+        }
+
+        .main-dice {
+            height: 100px;
+            margin-left: 50px;
+            margin-top: 20px;
+            object-fit: cover;
+
+        }
+
+        .roll {
+            height: 60px;
+            width: 200px;
+            margin-top: 28px;
+            background-color: rgb(240, 240, 129);
+            cursor: pointer;
+            font-size: 20px;
+        }
+
+        .roll:hover {
+            box-shadow: 0px 0px 10px rgb(44, 44, 44);
+        }
+    </style>
+</head>
+
+<body>
+    <h1 class="heading"> DICE ROLLER</h1>
+    <div class="app-conatiner" id="app-conatiner">
+        <img src="/dice-main.png" class="main-dice" id="main-dice">
+        <button type="text" class="roll" id="roll" onclick="roll()">Roll</button>
+    </div>
+    <script>
+        function roll() {
+            const randomnumber = Math.floor(Math.random() * (7 - 1) + 1)
+            const mainimage = document.getElementById("main-dice")
+            const mainbody = document.getElementById("app-container")
+            switch (randomnumber) {
+                case 1:
+                    mainimage.src = "1.png";
+
+
+                    break;
+                case 2:
+                    mainimage.src = "2.png";
+
+                    break;
+                case 3:
+                    mainimage.src = "3.png";
+
+                    break;
+                case 4:
+                    mainimage.src = "4.png";
+
+                    break;
+                case 5:
+                    mainimage.src = "5.png";
+
+                    break;
+                case 6:
+                    mainimage.src = "6.png";
+
+                    break;
+            }
+        }
+
+    </script>
+</body>
+
+</html>
